@@ -37,7 +37,7 @@
         function testShouter() {
             var whatToShout = 'fee figh foe fum';
             var expected = 'FEE FIGH FOE FUM!!!';
-            
+
             if (shouter(whatToShout) === expected) {
                 console.log('SUCCESS: `shouter` is working');
             }
@@ -47,6 +47,25 @@
         }
 
         testShouter();
+
+        // text normalizer
+        function textNormalizer(text) {
+            return text.toLowerCase().trim();
+        }
+
+        function testTextNormalizer() {
+            var text = "   let's GO SURFING NOW everyone is learning how   ";
+            var expected = "let's go surfing now everyone is learning how";
+            
+            if (textNormalizer(text) === expected) {
+                console.log('SUCCESS: `textNormalizer` is working');
+            }
+            else {
+                console.log('FAILURE: `textNormalizer` is not working');
+            }
+        }
+
+        testTextNormalizer();
     </script>
 </body>
 </html>
