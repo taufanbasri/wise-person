@@ -8,6 +8,7 @@
 <body>
 
     <script>
+        // wise Person
         function wisePerson(wiseType, whatToSay) {
             return 'A wise ' + wiseType + ' once said: "' + whatToSay + '".';
         }
@@ -27,6 +28,25 @@
         }
 
         testWisePerson();
+
+        // shouter
+        function shouter(whatToShout) {
+            return whatToShout.toUpperCase() + '!!!';
+        }
+
+        function testShouter() {
+            var whatToShout = 'fee figh foe fum';
+            var expected = 'FEE FIGH FOE FUM!!!';
+            
+            if (shouter(whatToShout) === expected) {
+                console.log('SUCCESS: `shouter` is working');
+            }
+            else {
+                console.log('FAILURE: `shouter` is not working');
+            }
+        }
+
+        testShouter();
     </script>
 </body>
 </html>
